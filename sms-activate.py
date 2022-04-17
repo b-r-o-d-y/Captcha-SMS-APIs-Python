@@ -33,7 +33,6 @@ while True:
     endpoint1 = f"https://api.sms-activate.org/stubs/handler_api.php?api_key={sms_api_key}&action=getStatus&id={sms_id}"
 
     response1 = requests.get(endpoint1)
-    #print(response3.text)
 
     if 'STATUS_WAIT_CODE' in response1.text:
         print(starting + 'Waiting for code...')
